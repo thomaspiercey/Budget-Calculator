@@ -69,6 +69,7 @@ body {
   height: 40vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)),
     url(lucas-benjamin-wQLAGv4_OYs-unsplash.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -88,7 +89,7 @@ body {
   border-radius: 20px;
   margin: 0.5em;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .container-flex {
     display: flex;
     justify-content: space-evenly;
@@ -196,6 +197,44 @@ body {
 .add__container {
   margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+.form__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.form__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 700px) {
+  .add__container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .form__top {
+    margin-bottom: 0.875em;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form__bottom {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .add__type {
@@ -232,6 +271,15 @@ body {
 .add__value {
   width: 100px;
 }
+@media only screen and (max-width: 700px) {
+  .add__description {
+    width: 100%;
+    margin-right: 0;
+  }
+  .add__value {
+    width: 100%;
+  }
+}
 
 .add__btn {
   font-size: 35px;
@@ -260,6 +308,12 @@ body {
   outline: none;
 }
 
+.icon__btn {
+  border: 3px solid #3a3b3c;
+  border-radius: 50%;
+  padding: 4px;
+}
+
 /***** LISTS *****/
 .container {
   width: 100%;
@@ -271,17 +325,18 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .subcontainer {
   min-height: 150px;
   background: #242526;
   border-radius: 20px;
   padding: 1em 1em 1em;
   margin: 1em;
-}
-
-@media only screen and (max-width: 600px) {
-  .subcontainer {
-  }
 }
 
 .income {
@@ -307,11 +362,9 @@ h2 {
 }
 
 .item {
-  padding: 13px 20px;
-  background: #3a3b3c;
-  border-radius: 50px;
-  margin-bottom: 1em;
+  padding: 13px 5px;
   height: 50px;
+  border-top: 1px solid #18191a;
 }
 
 /* .item:first-child {
